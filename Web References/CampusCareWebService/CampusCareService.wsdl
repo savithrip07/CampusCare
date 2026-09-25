@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTotalIssues">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTotalIssuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTotalIssuesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPendingIssues">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPendingIssuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPendingIssuesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInProgressIssues">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetInProgressIssuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetInProgressIssuesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResolvedIssues">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetResolvedIssuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetResolvedIssuesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTotalIssuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalIssues" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalIssuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPendingIssuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPendingIssues" />
+  </wsdl:message>
+  <wsdl:message name="GetPendingIssuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPendingIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInProgressIssuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInProgressIssues" />
+  </wsdl:message>
+  <wsdl:message name="GetInProgressIssuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInProgressIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResolvedIssuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResolvedIssues" />
+  </wsdl:message>
+  <wsdl:message name="GetResolvedIssuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResolvedIssuesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CampusCareServiceSoap">
+    <wsdl:operation name="GetTotalIssues">
+      <wsdl:input message="tns:GetTotalIssuesSoapIn" />
+      <wsdl:output message="tns:GetTotalIssuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingIssues">
+      <wsdl:input message="tns:GetPendingIssuesSoapIn" />
+      <wsdl:output message="tns:GetPendingIssuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInProgressIssues">
+      <wsdl:input message="tns:GetInProgressIssuesSoapIn" />
+      <wsdl:output message="tns:GetInProgressIssuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResolvedIssues">
+      <wsdl:input message="tns:GetResolvedIssuesSoapIn" />
+      <wsdl:output message="tns:GetResolvedIssuesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CampusCareServiceSoap" type="tns:CampusCareServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTotalIssues">
+      <soap:operation soapAction="http://tempuri.org/GetTotalIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingIssues">
+      <soap:operation soapAction="http://tempuri.org/GetPendingIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInProgressIssues">
+      <soap:operation soapAction="http://tempuri.org/GetInProgressIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResolvedIssues">
+      <soap:operation soapAction="http://tempuri.org/GetResolvedIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CampusCareServiceSoap12" type="tns:CampusCareServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTotalIssues">
+      <soap12:operation soapAction="http://tempuri.org/GetTotalIssues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingIssues">
+      <soap12:operation soapAction="http://tempuri.org/GetPendingIssues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInProgressIssues">
+      <soap12:operation soapAction="http://tempuri.org/GetInProgressIssues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResolvedIssues">
+      <soap12:operation soapAction="http://tempuri.org/GetResolvedIssues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CampusCareService">
+    <wsdl:port name="CampusCareServiceSoap" binding="tns:CampusCareServiceSoap">
+      <soap:address location="http://localhost:20579/CampusCareService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CampusCareServiceSoap12" binding="tns:CampusCareServiceSoap12">
+      <soap12:address location="http://localhost:20579/CampusCareService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
